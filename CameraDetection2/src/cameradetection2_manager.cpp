@@ -13,6 +13,10 @@ namespace cameradetection2 {
 */
 bool Cameradetection2Manager::OnInitialize()
 {
+    samplePtr_ = std::make_unique<mdc::Sample>();
+    if (!samplePtr_->Init()) {
+        return false;
+    }
     return true;
 }
 
@@ -22,6 +26,7 @@ bool Cameradetection2Manager::OnInitialize()
 */
 void Cameradetection2Manager::Run()
 {
+    samplePtr_->Run();
     return;
 }
 
@@ -31,6 +36,7 @@ void Cameradetection2Manager::Run()
 */
 void Cameradetection2Manager::OnTerminate()
 {
+    samplePtr_->Stop();
     return;
 }
 } /* namespace cameradetection2 */

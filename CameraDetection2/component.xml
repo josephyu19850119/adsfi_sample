@@ -22,10 +22,40 @@
       <NAME>ara-exec</NAME>
       <TYPE>mdc_sdk</TYPE>
     </DEPENDENCY>
+    <DEPENDENCY>
+      <NAME>ara-com</NAME>
+      <TYPE>mdc_sdk</TYPE>
+    </DEPENDENCY>
+    <DEPENDENCY>
+      <NAME>rm</NAME>
+      <TYPE>mdc_sdk</TYPE>
+    </DEPENDENCY>
+    <DEPENDENCY>
+      <NAME>yaml</NAME>
+      <TYPE>builtin</TYPE>
+    </DEPENDENCY>
+    <DEPENDENCY>
+      <NAME>pthread</NAME>
+      <TYPE>builtin</TYPE>
+    </DEPENDENCY>
+    <DEPENDENCY>
+      <NAME>camera_det_base</NAME>
+      <TYPE>scfi</TYPE>
+    </DEPENDENCY>
   </DEPENDENCIES>
+  <!--Generated interfaces. Do not modify manually!-->
+  <INTERFACES>
+    <INTERFACE>
+      <NAME>Object2dArrayIntf</NAME>
+      <TYPE>ServiceInterface</TYPE>
+      <NAMESPACE>adsfi</NAMESPACE>
+      <DIRECTION>PPortPrototype</DIRECTION>
+    </INTERFACE>
+  </INTERFACES>
   <!--Generated from manifest. Do not modify manually!-->
   <FEATURES>
     <FEATURE>log</FEATURE>
     <FEATURE>em</FEATURE>
+    <FEATURE>cm</FEATURE>
   </FEATURES>
 </COMPONENT>

@@ -13,6 +13,10 @@ namespace frontcameratracker2 {
 */
 bool Frontcameratracker2Manager::OnInitialize()
 {
+    samplePtr_ = std::make_unique<mdc::Sample>();
+    if (!samplePtr_->Init()) {
+        return false;
+    }
     return true;
 }
 
@@ -22,6 +26,7 @@ bool Frontcameratracker2Manager::OnInitialize()
 */
 void Frontcameratracker2Manager::Run()
 {
+    samplePtr_->Run();
     return;
 }
 
@@ -31,6 +36,7 @@ void Frontcameratracker2Manager::Run()
 */
 void Frontcameratracker2Manager::OnTerminate()
 {
+    samplePtr_->Stop();
     return;
 }
 } /* namespace frontcameratracker2 */

@@ -7,6 +7,7 @@
 
 #include "mdc/mdc_adaptive_application.h"
 #include "ara/core/string.h"
+#include "mdc/sample.h"
 namespace mdc {
 namespace cameradetection2 {
 class Cameradetection2Manager : public MdcAdaptiveApplication {
@@ -19,6 +20,8 @@ protected:
     virtual bool OnInitialize() override;
     virtual void Run() override;
     virtual void OnTerminate() override;
+private:
+    std::unique_ptr<mdc::Sample> samplePtr_;
 };
 } /* namespace cameradetection2 */
 } /* namespace mdc */
